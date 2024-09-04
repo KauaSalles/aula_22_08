@@ -5,10 +5,10 @@ document.getElementById('togglePassword').addEventListener('click', function () 
 
     if (passwordFieldType === 'password') {
         passwordField.setAttribute('type', 'text');
-        eyeIcon.src = 'eye-icon-open.png'; // Ícone de olho aberto
+        eyeIcon.src = 'https://w7.pngwing.com/pngs/355/665/png-transparent-ui-eye-hide-view-look-privacy-user-interface-icon-thumbnail.png'; 
     } else {
         passwordField.setAttribute('type', 'password');
-        eyeIcon.src = 'eye-icon.png'; // Ícone de olho fechado
+        eyeIcon.src = 'https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png'; 
     }
 });
 
@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
 
     if (username && password) {
-        // Substitua 'pagina-destino.html' pelo URL ou caminho para a página para onde você deseja redirecionar
+        
         window.location.href = ('login.html'); 
     } else {
         alert('Por favor, preencha todos os campos.');
