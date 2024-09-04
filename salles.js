@@ -1,26 +1,39 @@
-document.getElementById('togglePassword').addEventListener('click', function () {
-    const passwordField = document.getElementById('password');
-    const passwordFieldType = passwordField.getAttribute('type');
-    const eyeIcon = document.getElementById('eyeIcon');
-
-    if (passwordFieldType === 'password') {
-        passwordField.setAttribute('type', 'text');
-        eyeIcon.src = 'https://w7.pngwing.com/pngs/355/665/png-transparent-ui-eye-hide-view-look-privacy-user-interface-icon-thumbnail.png'; 
-    } else {
-        passwordField.setAttribute('type', 'password');
-        eyeIcon.src = 'https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png'; 
-    }
-});
-
+// script.js
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
+
+   
+    const validUsername = 'Kauã';
+    const validPassword = 'salles2007';
+
+    
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    if (username && password) {
-        
-        window.location.href = ('login.html'); 
-    } else {
+    
+    if (username === '' || password === '') {
         alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    
+    if (username === validUsername && password === validPassword) {
+        alert('Login bem-sucedido!');
+       
+    } else {
+        alert('Nome de usuário ou senha incorretos.');
+    }
+});
+
+document.getElementById('togglePassword').addEventListener('click', function() {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+    
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.src = 'https://w7.pngwing.com/pngs/372/242/png-transparent-eye-see-look-view-user-interface-icon.png'; 
+    } else {
+        passwordField.type = 'password';
+        eyeIcon.src = 'https://w7.pngwing.com/pngs/401/840/png-transparent-eye-eyes-hide-view-watch-show-disable-basic-user-interface-icon-thumbnail.png';
     }
 });
