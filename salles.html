@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="salles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" id="togglePassword">
+                        <img src="https://w7.pngwing.com/pngs/221/536/png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail.png" alt="png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail/Ocultar Senha" id="png-transparent-eye-password-see-view-minimalisticons-icon-thumbnail">
+                    </button>
+                </div>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <script src="salles.js"></script>
+</body>
+</html>
