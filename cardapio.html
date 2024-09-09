@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital - Hamburgueria</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+    <header>
+        <h1>Hamburgueria do Chef</h1>
+        <button class="cart-button" onclick="toggleCart()">Carrinho (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Escolha seu Lanche</h2>
+            <div class="menu-container">
+                <!-- Exemplo de Lanche -->
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Hamburguer">
+                    <h3>Cheeseburger Especial</h3>
+                    <p>R$ 20,00</p>
+                    <button onclick="addToCart('Cheeseburger Especial', 20)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais lanches e bebidas aqui -->
+            </div>
+
+            <h2>Escolha sua Bebida</h2>
+            <div class="menu-container">
+                <!-- Exemplo de Bebida -->
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Bebida">
+                    <h3>Refrigerante 350ml</h3>
+                    <p>R$ 5,00</p>
+                    <button onclick="addToCart('Refrigerante 350ml', 5)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais bebidas aqui -->
+            </div>
+        </section>
+
+        <section id="cart" class="hidden">
+            <h2>Seu Carrinho</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Total: R$ 0,00</p>
+            <button class="checkout-button" onclick="proceedToPayment()">Finalizar Compra</button>
+        </section>
+
+        <section id="payment" class="hidden">
+            <h2>Pagamento</h2>
+            <p>Total a pagar: R$ <span id="payment-total">0,00</span></p>
+            <label for="payment-method">Forma de pagamento:</label>
+            <select id="payment-method">
+                <option value="credit">Cartão de Crédito</option>
+                <option value="debit">Cartão de Débito</option>
+                <option value="pix">PIX</option>
+            </select>
+            <button class="pay-button" onclick="makePayment()">Pagar Agora</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hamburgueria do Chef. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="cardapio.js"></script>
+</body>
+</html>
